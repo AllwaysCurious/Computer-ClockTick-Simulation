@@ -11,17 +11,14 @@ ProgressNum = 0
 OPCODE = ""
 OPERAND = ""
 Memory = [[],[]] # 1-InstructionData 2-NumberData
-Passed = False
-while Passed == False:
+while True:
     Quest = input("How many ticks do you want the system to do? (Type = 'inf' for infinite ticks): ")
     if Quest.lower() == "inf":
         Quest = float("inf")
-        Passed = True
         break
     else:
         try:
             Quest = int(Quest)
-            Passed = True
             break
         except:
             print("Type only numbers!")
